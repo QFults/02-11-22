@@ -7,8 +7,44 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Document</title>
+  <style>
+
+    /* #myDiv { 
+      width: 1000px;
+      height: 1000px;
+      background-color: blue;
+    }
+
+    @media screen and (max-width: 576px) {
+      
+      #myDiv {
+        background-color: red;
+        width: 100%;
+        height: 500px;
+      }
+
+    } */
+
+    .columnBreak { 
+      display: none;
+    }
+
+    @media screen and (max-width: 576px) {
+
+      .formColumn {
+        margin-bottom: 15px;
+      }
+
+      .columnBreak {
+        display: block;
+      }
+
+    }
+
+  </style>
 </head>
 <body>
+  <!-- <div id="myDiv"></div> -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -60,7 +96,7 @@
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 formColumn">
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -78,6 +114,7 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+      <hr class="columnBreak">
       <div class="col-sm-6">
         <ul class="list-group">
           <li class="list-group-item">An item</li>
